@@ -5,7 +5,7 @@ import "./variation-1.scss";
 alert("Hello from Echo AB Testing Boilerplate!");
 
 // Start Variation JS
-!(function loadVariation() {
+void (function loadVariation() {
   // Main variation/application code
   var test = {
     init: function () {
