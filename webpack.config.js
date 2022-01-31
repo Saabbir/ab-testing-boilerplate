@@ -50,20 +50,11 @@ module.exports = (env, argv) => {
     plugins: [
       new MiniCssExtractPlugin(),
       new LiveReloadPlugin({
-        protocol: "https",
+        protocol: "http",
         port: 35729,
-        // liveCSS: false,
-        // liveImg: false,
         applyCSSLive: true,
-        //useSourceHash: true,
-        //ignore: /css|scss/,
-        key: fs.readFileSync(path.join(__dirname, "livereload.key"), "utf-8"),
-        cert: fs.readFileSync(path.join(__dirname, "livereload.crt"), "utf-8"),
       }),
     ],
-    devServer: {
-      https: true,
-    },
   };
 
   // Dev specific config
